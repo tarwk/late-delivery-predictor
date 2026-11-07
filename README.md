@@ -2,9 +2,9 @@
 
 Predict, **at purchase time**, which orders will arrive late, so an operations team can warn customers, prioritise risky orders with carriers, and spot slow sellers.
 
-**🔗 Live app: TODO-PASTE-YOUR-STREAMLIT-LINK**
+**🔗 Live app:(https://late-delivery-predictor-ik2zxw2gdr5hbjmfqr4wnq.streamlit.app/#seller-and-customer)**
 
-![App screenshot](docs/app_screenshot.png)
+![App screenshot](ww.png)
 
 ---
 
@@ -135,4 +135,4 @@ Python · pandas · scikit-learn (Pipeline, TargetEncoder, RandomizedSearchCV) �
 
 ## Author
 
-TODO-YOUR-NAME · [LinkedIn](TODO-LINK) · [GitHub](https://github.com/tarwk)
+Tarek mohamed al-fadaly · [GitHub](https://github.com/tarwk)
