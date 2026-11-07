@@ -10,10 +10,20 @@ import streamlit as st
 st.set_page_config(page_title="Late-Delivery Predictor", page_icon="📦", layout="wide")
 
 BASE = Path(__file__).parent
-MODEL_PATH = BASE / "model" / "late_pipeline.joblib"
-META_PATH = BASE / "model" / "metadata.json"
-ZIP_PATH = BASE / "data" / "zip_lookup.csv"
-SELLER_PATH = BASE / "data" / "seller_stats.csv"
+
+
+def find_file(name, folder):
+    """Look in the expected sub-folder first, then next to app.py (in case the upload flattened the folders)."""
+    for p in (BASE / folder / name, BASE / name):
+        if p.exists():
+            return p
+    return BASE / folder / name
+
+
+MODEL_PATH = find_file("late_pipeline.joblib", "model")
+META_PATH = find_file("metadata.json", "model")
+ZIP_PATH = find_file("zip_lookup.csv", "data")
+SELLER_PATH = find_file("seller_stats.csv", "data")
 
 
 # ───────────── loading (cached) ─────────────
